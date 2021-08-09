@@ -45,9 +45,9 @@ $ php artisan serve
 ```
 
 ### Log File
-You can check for the logs on /storage/logs/laravel.logs
+You can check for the logs on `/storage/logs/laravel.logs`
 ### Testing the Endpoints
-For postman, you need to have a headers to have a successful request. Please enter this `key` `value` pair on your headers.
+For postman, you need to have headers to have a successful request. Please enter this `key` `value` pair on your headers.
 ```
 Authorization: Bearer {token}
 Accept: application/json
@@ -105,13 +105,13 @@ url: http://localhost:8000/api/login
 method: POST
 url:  http://localhost:8000/api/logout
 ```
-#### GET Welcome Message
+#### Welcome Message
 ```
-method: GET
 # This is just for testing if GET request works
+method: GET
 url:  http://localhost:8000/api/github
 ```
-#### POST Github Usernames
+#### Fetch Github Usernames
 ```
 method: POST
 url:  http://localhost:8000/api/github
