@@ -45,7 +45,7 @@ $ php artisan serve
 ```
 
 ### Log File
-You can check for the logs on `/storage/logs/laravel.logs`
+You can check for the logs on `/storage/logs/laravel.log`
 ### Testing the Endpoints
 For postman, you need to have headers to have a successful request. Please enter this `key` `value` pair on your headers.
 ```
