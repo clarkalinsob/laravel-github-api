@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -29,6 +30,8 @@ class AuthController extends Controller
             'token' => $token
         ];
 
+        $logMsg = 'Successfully registered' . $user->name;
+        Log::info($logMsg);
         return response($response, 201);
     }
 
@@ -55,12 +58,16 @@ class AuthController extends Controller
             'token' => $token
         ];
 
+        $logMsg = 'Successfully logged in ' . $user->name;
+        Log::info($logMsg);
         return response($response, 201);
     }
 
     public function logout(Request $request) {
         auth()->user()->tokens()->delete();
 
+        $logMsg = 'Logged out';
+        Log::info($logMsg);
         return [
             'message' => 'Logged out'
         ];
